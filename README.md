@@ -21,7 +21,6 @@ A natural language interface to query structured data using **LangChain Agents**
 ├── main.py # Streamlit + Agent application
 ├── utils.py # Helper functions
 ├── Dockerfile # For containerization
-├── coinmarketcap.sqlite # Sample SQLite DB (CoinMarketCap data)
 ├── requirements.txt # Python dependencies
 ├── README.md
 ├── agentic_sql_assistant.ipynb Jupyter Notebook
