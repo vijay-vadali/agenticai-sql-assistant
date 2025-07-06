@@ -22,8 +22,8 @@ A natural language interface to query structured data using **LangChain Agents**
 ├── utils.py # Helper functions
 ├── Dockerfile # For containerization
 ├── requirements.txt # Python dependencies
-├── README.md
-├── agentic_sql_assistant.ipynb Jupyter Notebook
+├── README.md # Instructions
+├── agentic_sql_assistant.ipynb # Jupyter Notebook
 
 ```
 
