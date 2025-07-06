@@ -130,9 +130,9 @@ The agent uses:
 
 ## 📂 Dataset
 
-Includes a prebuilt SQLite database with daily price data for major cryptocurrencies:
+This project uses the [CoinMarketCap Historical Data](https://www.kaggle.com/datasets/bizzyvinci/coinmarketcap-historical-data) available on Kaggle. It contains detailed daily historical data for various cryptocurrencies including price, volume, market cap, and more.
 
-- Columns include: `coin_id`, `price`, `volume_24h`, `market_cap`, `percent_change_24h`, `date`, etc.
+Make sure to download the dataset and place the `coinmarketcap.sqlite` file in the project root.
 
 ---
 
