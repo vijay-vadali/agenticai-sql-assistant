@@ -1,4 +1,3 @@
-```markdown
 # 🧠 Agentic SQL Assistant
 
 A natural language interface to query structured data using **LangChain Agents**, **OpenAI's GPT**, and **Streamlit**. This assistant enables non-technical users to explore complex SQL databases using plain English.
@@ -15,6 +14,7 @@ A natural language interface to query structured data using **LangChain Agents**
 ---
 
 ## 📦 Project Structure
+
 ```
 
 .
@@ -25,7 +25,7 @@ A natural language interface to query structured data using **LangChain Agents**
 ├── requirements.txt # Python dependencies
 ├── README.md
 
-````
+```
 
 ---
 
@@ -46,6 +46,8 @@ A natural language interface to query structured data using **LangChain Agents**
    ```bash
    git clone https://github.com/vijay-vadali/agentic-sql-assistant.git
    cd agentic-sql-assistant
+   ```
+
 ````
 
 2. **Install Dependencies**
@@ -143,3 +145,4 @@ Includes a prebuilt SQLite database with daily price data for major cryptocurren
 - Export results to CSV
 
 ---
+````
