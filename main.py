@@ -1,12 +1,5 @@
 import warnings
-
-warnings.filterwarnings("ignore")
-
 import logging
-
-logging.getLogger().setLevel(logging.ERROR)
-logging.getLogger("langchain").setLevel(logging.ERROR)
-
 import os
 from utils import (
     strict_sql_generator,
@@ -30,6 +23,9 @@ import sqlite3
 import streamlit as st
 
 from datetime import datetime
+
+warnings.filterwarnings("ignore")
+logging.getLogger().setLevel(logging.ERROR)
 
 os.environ["OPENAI_API_KEY"] = "key"
 
