@@ -24,7 +24,7 @@ A natural language interface to query structured data using **LangChain Agents**
 ├── coinmarketcap.sqlite # Sample SQLite DB (CoinMarketCap data)
 ├── requirements.txt # Python dependencies
 ├── README.md
-├── agentic_sql_assistant.ipyng Jupyter Notebook
+├── agentic_sql_assistant.ipynb Jupyter Notebook
 
 ```
 
