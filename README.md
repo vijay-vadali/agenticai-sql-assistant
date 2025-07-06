@@ -8,7 +8,7 @@ A natural language interface to query structured data using **LangChain Agents**
 - Executes and explains SQL.
 - Auto-corrects invalid SQL using LLMs.
 - Stores recent conversation history.
-- Built-in Streamlit UI and FastAPI endpoint.
+- Built-in Streamlit UI.
 - Run locally or in Docker.
 
 ---
@@ -43,12 +43,11 @@ A natural language interface to query structured data using **LangChain Agents**
 ### 🖥️ Run Locally (Streamlit)
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/vijay-vadali/agentic-sql-assistant.git
    cd agentic-sql-assistant
    ```
-
-````
 
 2. **Install Dependencies**
 
@@ -145,4 +144,7 @@ Includes a prebuilt SQLite database with daily price data for major cryptocurren
 - Export results to CSV
 
 ---
-````
+
+```
+
+```
