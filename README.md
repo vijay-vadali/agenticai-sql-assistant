@@ -1,4 +1,4 @@
-# 🧠 Agentic SQL Assistant
+# 🧠 AgenticAI SQL Assistant
 
 A natural language interface to query structured data using **LangChain Agents**, **OpenAI's GPT**, and **Streamlit**. This assistant enables non-technical users to explore complex SQL databases using plain English.
 
