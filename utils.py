@@ -3,9 +3,11 @@ from langchain_community.utilities import SQLDatabase
 import re
 
 db = SQLDatabase.from_uri("sqlite:///coinmarketcap.sqlite")
-schema = db.get_table_info() 
+schema = db.get_table_info()
 
 llm = ChatOpenAI(temperature=0, model="gpt-4o")  # or "gpt-4" or "gpt-3.5-turbo"
+
+
 def strict_sql_generator(question: str) -> str:
     """
     Generate a valid SQL query from a natural language question using an LLM.
@@ -34,12 +36,13 @@ def strict_sql_generator(question: str) -> str:
     )
     return llm.predict(prompt)
 
+
 def fix_invalid_sql(sql: str, error_msg: str) -> str:
     """
     Attempts to fix an invalid SQL query by prompting a language model with the error context.
 
-    Given a faulty SQL statement and the associated error message, this function uses an LLM 
-    (e.g., ChatOpenAI) to suggest a corrected version of the query. The prompt instructs the model 
+    Given a faulty SQL statement and the associated error message, this function uses an LLM
+    (e.g., ChatOpenAI) to suggest a corrected version of the query. The prompt instructs the model
     to return only the fixed SQL query, with no additional explanation or formatting.
 
     Args:
@@ -56,12 +59,13 @@ def fix_invalid_sql(sql: str, error_msg: str) -> str:
     )
     return llm.predict(prompt)
 
+
 def extract_sql_from_response(text):
     """
     Extracts a raw SQL query from a text response, typically returned by a language model.
 
     This function searches for SQL code enclosed in markdown-style triple backticks (e.g., ```sql ... ```)
-    and extracts the SQL statement. If no code block is found, it returns the entire input text stripped 
+    and extracts the SQL statement. If no code block is found, it returns the entire input text stripped
     of leading and trailing whitespace.
 
     Args:
@@ -75,22 +79,24 @@ def extract_sql_from_response(text):
         return match.group(1).strip()
     return text.strip()
 
+
 def extract_tables_from_sql(sql_query):
     """
     Extracts table names used in a SQL query.
 
-    This function identifies and returns all table names that appear after 
+    This function identifies and returns all table names that appear after
     'FROM' or 'JOIN' keywords in the SQL query using regular expression matching.
 
     Args:
         sql_query (str): A SQL query string.
 
     Returns:
-        list of tuple: A list of tuples containing table names found after 'FROM' or 'JOIN'. 
-                       Each tuple contains two elements, with one of them being None 
+        list of tuple: A list of tuples containing table names found after 'FROM' or 'JOIN'.
+                       Each tuple contains two elements, with one of them being None
                        depending on which keyword matched.
     """
-    return re.findall(r'FROM\s+(\w+)|JOIN\s+(\w+)', sql_query, re.IGNORECASE)
+    return re.findall(r"FROM\s+(\w+)|JOIN\s+(\w+)", sql_query, re.IGNORECASE)
+
 
 def get_actual_tables(db: SQLDatabase):
     """
@@ -113,6 +119,7 @@ def get_actual_tables(db: SQLDatabase):
     conn.close()
     return set(tables)
 
+
 def validate_sql_tables(sql_query, db: SQLDatabase):
     """
     Validates whether the SQL query references only existing tables in the database.
@@ -132,6 +139,7 @@ def validate_sql_tables(sql_query, db: SQLDatabase):
     sql_tables = set(filter(None, sum(extract_tables_from_sql(sql_query), ())))
     missing = sql_tables - actual_tables
     return missing
+
 
 def auto_correct_sql(sql_query, schema, missing_tables):
     """
