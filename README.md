@@ -142,9 +142,3 @@ Make sure to download the dataset and place the `coinmarketcap.sqlite` file in t
 - Add support for more SQL engines (Postgres, MySQL)
 - Fine-tuned models for better SQL accuracy
 - Export results to CSV
-
----
-
-```
-
-```
