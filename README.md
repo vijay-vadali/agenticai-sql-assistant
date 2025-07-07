@@ -53,8 +53,8 @@ A natural language interface to query structured data using **LangChain Agents**
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/vijay-vadali/agentic-sql-assistant.git
-   cd agentic-sql-assistant
+   git clone https://github.com/vijay-vadali/agenticai-sql-assistant.git
+   cd agenticai-sql-assistant
    ```
 
 2. **Install Dependencies**
@@ -92,7 +92,7 @@ A natural language interface to query structured data using **LangChain Agents**
 1. **Build the Image**
 
    ```bash
-   docker build -t agentic-sql-assistant .
+   docker build -t agenticai-sql-assistant .
    ```
 
 2. **Run the Container**
@@ -100,7 +100,7 @@ A natural language interface to query structured data using **LangChain Agents**
    ```bash
    docker run -p 8501:8501 \
      -e OPENAI_API_KEY=sk-xxxxx \
-     agentic-sql-assistant
+     agenticai-sql-assistant
    ```
 
 3. **Access the App**
