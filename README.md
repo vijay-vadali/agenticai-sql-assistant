@@ -38,6 +38,14 @@ A natural language interface to query structured data using **LangChain Agents**
 
 ---
 
+## 🖼️ Demo Screenshot
+
+![Agent UI Screenshot](images/streamlit.png)
+
+## 🖼️ Agent Workflow
+
+![Workflow](images/workflow.png)
+
 ## 🚀 Getting Started
 
 ### 🖥️ Run Locally (Streamlit)
